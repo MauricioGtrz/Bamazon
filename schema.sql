@@ -4,25 +4,37 @@ CREATE DATABASE bamazon_db;
 
 USE bamazon_db;
 
-CREATE TABLE products (
-    item_id INT NOT NULL AUTO_INCREMENT,
-    product_name VARCHAR(100) NOT NULL,
-    department_name VARCHAR(100) NOT NULL,
-    price INT NOT NULL,
-    stock_quantitiy INT NOT NULL,
-    PRIMARY KEY (item_id)
+CREATE TABLE products
+(
+  item_id INT
+  AUTO_INCREMENT NOT NULL,
+  product_name VARCHAR
+  (45) NOT NULL,
+  department_name VARCHAR
+  (45) NOT NULL,
+  price DECIMAL
+  (10,2) NOT NULL,
+  stock_quantity INT
+  (10) NOT NULL,
+  primary key
+  (item_id)
 );
 
-INSERT INTO products (product_name, department_name, price, stock_quantitiy) VALUES ("Rubber Duck", "Toys", 20, 5);
-INSERT INTO products (product_name, department_name, price, stock_quantitiy) VALUES ("Chocolate", "Food", 2, 300);
-INSERT INTO products (product_name, department_name, price, stock_quantitiy) VALUES ("Laptop", "Electronics", 1200, 75);
-INSERT INTO products (product_name, department_name, price, stock_quantitiy) VALUES ("Jacket", "Clothing", 45, 40);
-INSERT INTO products (product_name, department_name, price, stock_quantitiy) VALUES ("Catcher in the Rye", "Books", 10, 15);
-INSERT INTO products (product_name, department_name, price, stock_quantitiy) VALUES ("Vitamin D Tablets", "Health", 15, 160);
-INSERT INTO products (product_name, department_name, price, stock_quantitiy) VALUES ("Razor Blades", "Personal Hygiene", 25, 84);
-INSERT INTO products (product_name, department_name, price, stock_quantitiy) VALUES ("Coffee Grounds", "Food", 12, 30);
-INSERT INTO products (product_name, department_name, price, stock_quantitiy) VALUES ("Lego Castle", "Toys", 20, 12);
-INSERT INTO products (product_name, department_name, price, stock_quantitiy) VALUES ("Trousers", "Clothing", 35, 50);
+
+  INSERT INTO products
+    (product_name, department_name, price, stock_quantity)
+  VALUES
+    ("Rubber Duck", "Toys", 49.95, 150),
+    ("Chocolate Bar", "Food", 59.99, 200),
+    ("Laptop", "Electronics", 24.50, 50),
+    ("Lego Star Wars Set", "Toys", 75.00, 5),
+    ("Headphones", "Electronics", 54.25, 35),
+    ("Jacket", "CLothing", 42.42, 42),
+    ("Trousers", "Clothing", 15.00, 25),
+    ("Chips", "Food", 25.50, 57),
+    ("Cathcer in the Rye", "Books", 30.50, 35),
+    ("1984", "Books", 19.95, 23);
 
 
-SELECT * FROM products;
+  SELECT *
+  FROM products;
